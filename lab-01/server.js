@@ -24,6 +24,8 @@ app.use((req, res) => {
     res.status(404).send('404 - Page Not Found');
 });
 
-app.listen(3000, () => {
-    console.log('Express server running at http://localhost:3000');
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+    console.log(`Express server running on port ${port}`);
 });
